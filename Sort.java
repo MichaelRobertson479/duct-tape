@@ -5,6 +5,7 @@ public class Sort {
   public static void main (String[] args) {
 
     int[] data = {2,1,3,4,8,5,7,6};
+
     ArrayList<Integer> data2 = new ArrayList<Integer>();
     data2.add(2);
     data2.add(1);
@@ -15,11 +16,17 @@ public class Sort {
     data2.add(7);
     data2.add(6);
 
+    sort(data);
     insertSort(data2);
 
     for (int i = 0; i < data2.size(); i++) {
 
       System.out.println(data2.get(i));
+    }
+
+    for (int i = 0; i < data.length; i++) {
+
+      System.out.println(data[i]);
     }
   }
 
