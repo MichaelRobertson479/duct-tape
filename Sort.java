@@ -4,7 +4,7 @@ public class Sort {
 
   public static void main (String[] args) {
 
-    int[] data = {2,1,3,4,8,5,7,6};
+    int[] data = {2,1,3,4,8,5,7,6,0};
 
     ArrayList<Integer> data2 = new ArrayList<Integer>();
     data2.add(2);
@@ -15,6 +15,7 @@ public class Sort {
     data2.add(5);
     data2.add(7);
     data2.add(6);
+    data2.add(0);
 
     sort(data);
     insertSort(data2);
