@@ -6,7 +6,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-int random() {
+int randomfunc() {
 
     int file = open("/dev/random",O_RDONLY);
 
@@ -21,7 +21,7 @@ int random() {
 
 int main() {
 
-    printf("random integer: %d",random());
+    printf("random integer: %d",randomfunc());
 
     return 0;
 }
