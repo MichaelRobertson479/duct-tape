@@ -11,9 +11,9 @@ int randomfunc() {
     int file = open("/dev/random",O_RDONLY);
 
     int random;
-    read("/dev/random",random,sizeof(int));
+    read(file,random,sizeof(int));
 
-    close("/dev/random");
+    close(file);
 
     return random;
 }
