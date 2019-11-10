@@ -21,55 +21,38 @@ int randomfunc() {
 
 int main() {
 
-    int arr1[10];
-    int arr2[10];
+    int *arr1;
+    int *arr2;
 
     printf("Generating random numbers:\n");
 
     int i;
+    int *p = arr1;
     for (i = 0; i < 10; i++) {
 
         int random = randomfunc();
         printf("random %d: %d\n",i,random);
-        arr1[i] = random;
+        *p = random;
+        p++;
     }
 
     printf("\nWriting numbers to file...\n");
 
     int file = open("randomnumbers",O_RDWR,111);
 
-    // if (file == -1) {
-    //     printf("File creation failed\n");
-    //     printf("%s\n",strerror(errno));
-    //     return 0;
-    // }
-
-    //int write = 
     write(file, arr1, 10 * sizeof(int));
-
-    // if (write == -1) {
-    //     printf("Writing failed\n");
-    //     printf("%s\n",strerror(errno));
-    //     return 0;
-    // }
 
     printf("\nReading numbers to file...\n");
 
-    //int read = 
-    read(file, arr2, 10 * sizeof(int));
-
-    // if (read == -1) {
-    //     printf("Reading failed\n");
-    //     printf("%s\n",strerror(errno));
-    //     return 0;
-    // }
+    read(file, arr2, 10 * sizeof(int));\
 
     printf("\nVerification that written values were the same:\n");
 
     for (i = 0; i < 10; i++) {
 
         int random = randomfunc();
-        printf("random %d: %d\n",i,arr2[i]);
+        printf("random %d: %d\n",i,arr2);
+        arr2++;
     }
 
     close(file);
