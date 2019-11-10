@@ -38,11 +38,13 @@ int main() {
 
     int file = open("randomnumbers.txt",O_CREAT|O_EXCL|O_RDWR,777);
 
-    write(file, arr1, 10 * sizeof(int));
+    int w = write(file, arr1, 10 * sizeof(int));
+    printf("write worked?: %d",w);
 
     printf("\nReading numbers to file...\n");
 
-    read(file, arr2, 10 * sizeof(int));
+    int r = read(file, arr2, 10 * sizeof(int));
+    printf("read worked?: %d",r);
 
     printf("\nVerification that written values were the same:\n");
 
