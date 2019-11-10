@@ -10,13 +10,12 @@ int randomfunc() {
 
     int file = open("/dev/random",O_RDONLY);
 
-    int rand = 0;
-    int *pointer = &rand;
-    read(file,pointer,sizeof(int));
+    int random;
+    read(file,&random,sizeof(int));
 
     close(file);
 
-    return rand;
+    return random;
 }
 
 
