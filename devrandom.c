@@ -21,19 +21,17 @@ int randomfunc() {
 
 int main() {
 
-    int *arr1;
-    int *arr2;
+    int arr1[10];
+    int arr2[10];
 
     printf("Generating random numbers:\n");
 
     int i;
-    int *p = arr1;
     for (i = 0; i < 10; i++) {
 
         int random = randomfunc();
         printf("random %d: %d\n",i,random);
-        *p = random;
-        p++;
+        arr1[i] = random;
     }
 
     printf("\nWriting numbers to file...\n");
@@ -51,8 +49,7 @@ int main() {
     for (i = 0; i < 10; i++) {
 
         int random = randomfunc();
-        printf("random %d: %d\n",i,*arr2);
-        arr2++;
+        printf("random %d: %d\n",i,arr2[i]);
     }
 
     close(file);
