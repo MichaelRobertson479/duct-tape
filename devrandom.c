@@ -21,8 +21,6 @@ int randomfunc() {
 
 int main() {
 
-    umask(0);
-
     int arr1[10];
     int arr2[10];
 
@@ -38,7 +36,7 @@ int main() {
 
     printf("\nWriting numbers to file...\n");
 
-    int file = open("randomnumbers",O_RDWR,777);
+    int file = open("randomnumbers",O_RDWR,444);
 
     write(file, arr1, 10 * sizeof(int));
 
