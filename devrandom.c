@@ -51,7 +51,7 @@ int main() {
     for (i = 0; i < 10; i++) {
 
         int random = randomfunc();
-        printf("random %d: %d\n",i,arr2);
+        printf("random %d: %d\n",i,*arr2);
         arr2++;
     }
 
