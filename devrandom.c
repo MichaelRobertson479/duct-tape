@@ -21,6 +21,8 @@ int randomfunc() {
 
 int main() {
 
+    umask(0);
+
     int arr1[10];
     int arr2[10];
 
