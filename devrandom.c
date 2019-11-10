@@ -16,7 +16,7 @@ int randomfunc() {
 
     close(file);
 
-    return random;
+    return rand;
 }
 
 
