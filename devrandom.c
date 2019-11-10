@@ -36,19 +36,18 @@ int main() {
 
     printf("\nWriting numbers to file...\n");
 
-    int file = open("randomnumbers",O_RDWR,111);
+    int file = open("randomnumbers",O_RDWR,777);
 
     write(file, arr1, 10 * sizeof(int));
 
     printf("\nReading numbers to file...\n");
 
-    read(file, arr2, 10 * sizeof(int));\
+    read(file, arr2, 10 * sizeof(int));
 
     printf("\nVerification that written values were the same:\n");
 
     for (i = 0; i < 10; i++) {
 
-        int random = randomfunc();
         printf("random %d: %d\n",i,arr2[i]);
     }
 
