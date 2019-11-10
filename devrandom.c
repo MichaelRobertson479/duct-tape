@@ -43,11 +43,11 @@ int main() {
 
     close(file);
 
-    int file = open("randomnumbers.txt",O_RDONLY);
+    int file2 = open("randomnumbers.txt",O_RDONLY);
 
     printf("\nReading numbers to file...\n");
 
-    int r = read(file, arr2, 10 * sizeof(int));
+    int r = read(file2, arr2, 10 * sizeof(int));
     printf("read worked?: %d",r);
 
     printf("\nVerification that written values were the same:\n");
@@ -57,7 +57,7 @@ int main() {
         printf("random %d: %d\n",i,arr2[i]);
     }
 
-    close(file);
+    close(file2);
 
     return 0;
 }
