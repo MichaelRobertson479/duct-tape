@@ -36,7 +36,7 @@ int main() {
 
     printf("\nWriting numbers to file...\n");
 
-    int file = open("randomnumbers",O_CREAT|O_RDWR,777);
+    int file = open("randomnumbers",O_CREAT|O_EXCL|O_RDWR,444);
 
     write(file, arr1, 10 * sizeof(int));
 
