@@ -36,7 +36,7 @@ int main() {
 
     printf("\nWriting numbers to file...\n");
 
-    int file = open("randomnumbers.txt",O_CREAT|O_EXCL|O_RDWR,777);
+    int file = open("randomnumbers.txt",O_CREAT|O_RDWR,777);
 
     int w = write(file, arr1, 10 * sizeof(int));
     printf("write worked?: %d",w);
