@@ -10,4 +10,4 @@ run:
 clean:
 	rm *.o
 	rm randomnumbers.txt
-	rm *~
+	rm devrandom
